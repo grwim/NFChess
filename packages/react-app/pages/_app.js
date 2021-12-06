@@ -10,9 +10,10 @@ import { ThemeSwitcherProvider } from "react-css-theme-switcher";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const targetNetwork = "localhost";
+const targetNetwork = "rinkeby";
 
 function MyApp({ Component, pageProps }) {
+
   const router = useRouter();
   const prevTheme = useRef("light");
 
@@ -41,6 +42,11 @@ function MyApp({ Component, pageProps }) {
             <Menu.Item key="/">
               <Link href="/">
                 <a>YourCollectibles</a>
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="/chess-game">
+              <Link href="/chess-game">
+                <a>Chess</a>
               </Link>
             </Menu.Item>
             <Menu.Item key="/transfers">

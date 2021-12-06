@@ -18,14 +18,14 @@ function Home({ web3 }) {
 
   // updateBalance if it has changed
   const updateBalance = async () => {
-    const balance = await readContracts.YourCollectible.balanceOf(address);
-    const _balanceNumber = balance && balance.toNumber && balance.toNumber();
+    // const balance = await readContracts.YourCollectible.balanceOf(address);
+    // const _balanceNumber = balance && balance.toNumber && balance.toNumber();
 
-    console.log("CALLING:", balance);
+    // console.log("CALLING:", balance);
 
-    if (_balanceNumber != yourBalance) {
-      setYourBalance(_balanceNumber);
-    }
+    // if (_balanceNumber != yourBalance) {
+    //   setYourBalance(_balanceNumber);
+    // }
   };
 
   // poll and update balance for every transferEvent change
@@ -40,7 +40,7 @@ function Home({ web3 }) {
       console.log(`updateYourCollectibles: `, address, yourBalance);
       for (let tokenIndex = 0; tokenIndex < yourBalance; tokenIndex++) {
         try {
-          console.log("GEtting token index", tokenIndex);
+          console.log("Getting token index", tokenIndex);
           const tokenId = await readContracts.YourCollectible.tokenOfOwnerByIndex(address, tokenIndex);
           console.log("tokenId", tokenId);
           const tokenURI = await readContracts.YourCollectible.tokenURI(tokenId);

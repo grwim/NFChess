@@ -1,4 +1,6 @@
 {
+   "solidity.compileUsingRemoteVersion": "v0.7.4+commit.3f05b770",
+   "solidity.enableLocalNodeCompiler": false,
    "solidity.packageDefaultDependenciesDirectory": "node_modules/@scaffold-eth/hardhat/node_modules/",
    "solidity-va.test.defaultUnittestTemplate": "hardhat",
    "explorerExclude.backup": null,
